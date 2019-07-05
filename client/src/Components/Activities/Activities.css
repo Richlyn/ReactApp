@@ -1,0 +1,21 @@
+.MuiGridList-root-1 {
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+  bottom: 20px;
+  margin-top: 40%;
+  /* background-color: theme.palette.background.paper; */
+}
+
+.MuiGridList-root-1 {
+  flex-wrap: nowrap;
+  /* Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS. */
+  transform: translateZ(0);
+}
+title {
+  color: red;
+}
+/* .titleBar {
+      background:
+        'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
+    } */

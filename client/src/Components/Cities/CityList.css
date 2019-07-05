@@ -1,0 +1,38 @@
+.gridList {
+  margin-top: 200px;
+  background-color: aquamarine;
+}
+.MuiGridList-root-1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow: hidden;
+  margin-top: 40%;
+  /* background-color: theme.palette.background.paper; */
+}
+
+.cities {
+  margin-top: 40%;
+}
+.gridList {
+  width: 500;
+  height: 450;
+  /* Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS. */
+  transform: translateZ(0);
+}
+
+.cityName {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 0%,
+    + rgba(0, 0, 0, 0.3) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+icon {
+  color: "white";
+}
+
+
+
