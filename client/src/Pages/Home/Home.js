@@ -2,14 +2,12 @@ import React, { Component } from "react";
 // import { NavLink } from "react-router-dom";
 import Logo from "../../Assets/MYtineraryLogo.png";
 import Arrow from "../../Assets/circled-right-2.png";
-import Header from "../../Components/Header/Header";
 import "./Home.css";
 
 class Home extends Component {
   render() {
     return (
       <div className="Home">
-        <Header />
         <header className="Home-header">
           <img src={Logo} className="MYtinerary-logo" alt="logo" />
         </header>
@@ -30,8 +28,7 @@ class Home extends Component {
               href="https://reactjs.org"
               rel="noopener noreferrer"
               target="_blank"
-            >
-              Log in
+              Log in>
             </a>
             <a
               className="Home-link"

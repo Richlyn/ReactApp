@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import Nav from "./Components/Nav/Nav.js";
+import Header from "./Components/Header/Header.js";
 import Home from "./Pages/Home/Home.js";
 import Cities from "./Pages/Cities/Cities.js";
 import Itineraries from "./Pages/Itineraries/Itineraries.js";
@@ -17,7 +17,7 @@ class App extends Component {
       <div id="page-wrap">
         <BrowserRouter>
           <div>
-            <Nav />
+            <Header />
             <Switch>
               <Route path="/" component={Home} exact />
               <Route path="/Cities" component={Cities} />
