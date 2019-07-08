@@ -12,7 +12,6 @@ import SvgIcon from '@material-ui/core/SvgIcon';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 import FormGroup from '@material-ui/core/FormGroup';
-import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
@@ -68,7 +67,7 @@ const useStyles = makeStyles(theme => ({
 
 
 export default function MenuAppBar() {
-   const classes = useStyles();
+  const classes = useStyles();
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
   // const open = Boolean(anchorEl);
@@ -145,7 +144,7 @@ export default function MenuAppBar() {
         </div>
         <Divider />
         <MenuList>
-          <MenuItem component={Link} to="/">  <HomeIcon className={classes.icon} color="primary" />
+          <MenuItem component={Link} to="/"><HomeIcon className={classes.icon} color="primary" />
           Home
           </MenuItem>
           <MenuItem component={Link} to="/Cities"> 
@@ -168,9 +167,6 @@ export default function MenuAppBar() {
         </MenuList>
       </Drawer>
       
-              <Typography variant="h6" className={classes.title}>
-                MYTinerary
-              </Typography>
               {auth && (
                 <div>
                   <IconButton

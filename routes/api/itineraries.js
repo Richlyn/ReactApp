@@ -13,9 +13,9 @@ router.get("/", function(req, res) {
     .catch(err => res.status(404).json("sorry Error"));
 });
 
-router.get("/:name", function(req, res) {
-  var city = req.params.name;
-  Itinerary.find({ city: city }, (err, itineraries) => {
+router.get("/:cityName", function(req, res) {
+  var cityName = req.params.cityName;
+  Itinerary.find({ 'cityName': cityName }, (err, itineraries) => {
     if (!itineraries) {
       return res.status(404).json(err);
     } else {
@@ -23,5 +23,6 @@ router.get("/:name", function(req, res) {
     }
   });
 });
+
 
 module.exports = router;

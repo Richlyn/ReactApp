@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-// import { NavLink } from "react-router-dom";
+import Blog from "../../Components/Blog/Blog.js"
+import Divider from '@material-ui/core/Divider';
 import Logo from "../../Assets/MYtineraryLogo.png";
-import Arrow from "../../Assets/circled-right-2.png";
+
 import "./Home.css";
 
 class Home extends Component {
@@ -11,35 +12,12 @@ class Home extends Component {
         <header className="Home-header">
           <img src={Logo} className="MYtinerary-logo" alt="logo" />
         </header>
+        <Divider />
         <p>
-          Find your perfect trip, designed by insiders who know and love their
-          cities.
+        Find out Tips & Tricks to have the Best Local Experience 
         </p>
-
-        <section>
-          <h2>Start Browsing</h2>
-          <img src={Arrow} className="circledArrow" alt="circle arrow" />
-        </section>
-        <section>
-          <p>Want to build your own MYtinerary?</p>
-          <div class="Links">
-            <a
-              className="Home-link"
-              href="https://reactjs.org"
-              rel="noopener noreferrer"
-              target="_blank"
-              Log in>
-            </a>
-            <a
-              className="Home-link"
-              href="https://reactjs.org"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Create Account
-            </a>
-          </div>
-        </section>
+        <Divider />
+        <Blog/>
       </div>
     );
   }

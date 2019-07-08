@@ -2,8 +2,10 @@ import React, { Component } from "react";
 import "./Itineraries.css";
 import PropTypes from "prop-types";
 import classnames from "classnames";
+
 import { connect } from "react-redux";
 import Card from "@material-ui/core/Card";
+
 import Avatar from "@material-ui/core/Avatar";
 import ShareIcon from "@material-ui/icons/Share";
 import Collapse from "@material-ui/core/Collapse";
@@ -34,7 +36,8 @@ class ItineraryList extends Component {
   };
 
   render() {
-    const { itineraries } = this.props;
+    const { itineraries, cities } = this.props;
+    
     return (
       <Card className={itineraries}>
         {itineraries &&
@@ -42,7 +45,9 @@ class ItineraryList extends Component {
             return (
               <React.Fragment>
                 <CardHeader
-                  key={itineraries}
+                itineraries={itineraries.title} 
+                cityName= {cities.cityName} 
+                 key={itineraries}
                   avatar={
                     <Avatar
                       alt={itineraries.title}

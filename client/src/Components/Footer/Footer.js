@@ -1,15 +1,42 @@
-import React, { Component } from "react";
-import Homebtn from "../../Assets/homeIcon.png";
-import "./Footer.css";
-class Footer extends Component {
-  render() {
-    return (
-      <div>
-        <footer>
-          <img src={Homebtn} className="homeIcon" alt="home" />
-        </footer>
-      </div>
-    );
-  }
-}
-export default Footer;
+// import React from "react";
+// import {Link } from 'react-router-dom'
+// import { makeStyles } from '@material-ui/core/styles';
+// import { red } from '@material-ui/core/colors';
+// import SvgIcon from '@material-ui/core/SvgIcon';
+
+// const useStyles = makeStyles(theme => ({
+//   root: {
+//     display: 'flex',
+//     justifyContent: 'center',
+//     alignItems: 'flex-end',
+//   },
+//   icon: {
+//     margin: theme.spacing(2),
+//   },
+//   iconHover: {
+//     margin: theme.spacing(2),
+//     '&:hover': {
+//       color: red[800],
+//     },
+//   },
+// }));
+
+// function HomeIcon(props) {
+//   return (
+//     <SvgIcon {...props}>
+//       <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+//     </SvgIcon>
+//   );
+// }
+
+// export default function SvgIcons() {
+// const classes = useStyles();
+//     return (
+//       <div>
+//         <footer>  
+//           <HomeIcon component={Link} to="/" className={classes.iconHover} color="error" style={{ fontSize: 30 }} />    
+//         </footer>
+//       </div>
+//     );
+//   }
+

@@ -26,7 +26,7 @@ class CityList extends Component {
   }
 
   render() {
-    const { cities } = this.props;
+    const {cities } = this.props;
     return (
       <div className={cities}>
         <GridList cellHeight={200} spacing={1} className={cities}>
@@ -38,7 +38,8 @@ class CityList extends Component {
                 rows={cities.featured ? 2 : 1}
               >
                 <img src={cities.img} alt={cities.cityName} />
-                <Link  to='itineraries'> <GridListTileBar
+                <Link name="itineraries" to={{pathname: `/itineraries/${cities.cityName}`}}> 
+                <GridListTileBar
                title={cities.cityName}
                   titlePosition="top"
                   actionIcon={
@@ -48,7 +49,8 @@ class CityList extends Component {
                   }
                   actionPosition="left"
                   className={cities.cityName}
-                /></Link> 
+                />
+                </Link> 
               </GridListTile>
             ))}
         </GridList>

@@ -22,12 +22,12 @@ class App extends Component {
               <Route path="/" component={Home} exact />
               <Route path="/Cities" component={Cities} />
               <Route path="/Itineraries" component={Itineraries} />
-              <Route path="/Itineraries/:name" component={Itineraries} />
+              <Route path="/Itineraries/:cityName" component={Itineraries} />
               <Route path="/BecomeAMember" component={BecameAMember} />
               <Route path="/Login" component={Login} />
               <Route component={Error} />
             </Switch>
-          </div>
+          </div>  
         </BrowserRouter>
         {/* 
         <p>{this.state.response}</p>
