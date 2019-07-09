@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-
-import Header from "./Components/Header/Header.js";
 import Home from "./Pages/Home/Home.js";
-import Cities from "./Pages/Cities/Cities.js";
-import Itineraries from "./Pages/Itineraries/Itineraries.js";
-import BecameAMember from "./Pages/Member/Create/Create.js";
-import Login from "./Pages/Member/Login/Login.js";
+import Nav from "./Components/Nav/Nav.js";
 import Error from "./Pages/Error/Error.js";
+import Blogs from "./Pages/Blogs/Blogs.js";
+import Cities from "./Pages/Cities/Cities.js";
+import Member from "./Pages/Member/Member/Member.js";
+import Login from "./Pages/Member/Login/Login.js";
 import Footer from "./Components/Footer/Footer.js";
+import Itineraries from "./Pages/Itineraries/Itineraries.js";
 import "./App.css";
 
 class App extends Component {
@@ -17,33 +17,19 @@ class App extends Component {
       <div id="page-wrap">
         <BrowserRouter>
           <div>
-            <Header />
+            <Nav />
             <Switch>
               <Route path="/" component={Home} exact />
               <Route path="/Cities" component={Cities} />
               <Route path="/Itineraries" component={Itineraries} />
               <Route path="/Itineraries/:cityName" component={Itineraries} />
-              <Route path="/BecomeAMember" component={BecameAMember} />
+              <Route path="/Blogs" component={Blogs} />
               <Route path="/Login" component={Login} />
+              <Route path="/Member" component={Member} />
               <Route component={Error} />
             </Switch>
           </div>  
         </BrowserRouter>
-        {/* 
-        <p>{this.state.response}</p>
-        <form onSubmit={this.handleSubmit}>
-          <p>
-            <strong>Post to Server:</strong>
-          </p>
-          <input
-            type="text"
-            value={this.state.post}
-            onChange={e => this.setState({ post: e.target.value })}
-          />
-          <button type="submit">Submit</button>
-        </form>
-        <p>{this.state.responseToPost}</p> */}
-
         <Footer />
       </div>
     );

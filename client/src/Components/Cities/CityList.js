@@ -42,12 +42,6 @@ class CityList extends Component {
                 <GridListTileBar
                title={cities.cityName}
                   titlePosition="top"
-                  actionIcon={
-                    <IconButton className={cities.icon}>
-                      <StarBorderIcon />
-                    </IconButton>
-                  }
-                  actionPosition="left"
                   className={cities.cityName}
                 />
                 </Link> 

@@ -2,11 +2,13 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
+import { Link as RouterLink } from 'react-router-dom';
 
 const images = [
   {
     url: 'https://images.pexels.com/photos/2174656/pexels-photo-2174656.jpeg?cs=srgb&dl=coconut-trees-couple-daylight-2174656.jpg&fm=jpg',
-    title: 'MyTinerary',
+    title: 'MyTinerary Blogs',
     width: '40%',
   },
   {
@@ -26,7 +28,7 @@ const images = [
   },
   {
     url: 'https://images.pexels.com/photos/2551599/pexels-photo-2551599.jpeg?cs=srgb&dl=berries-breakfast-delicious-2551599.jpg&fm=jpg',
-    title: 'Breakfast',
+    title: 'Find The Best Breakfast',
     width: '30%',
   },
   {
@@ -116,6 +118,8 @@ export default function ButtonBases() {
     <div className={classes.root}>
       {images.map(image => (
         <ButtonBase
+        component={Link} 
+        to="/Blogs"
           focusRipple
           key={image.title}
           className={classes.image}

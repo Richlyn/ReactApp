@@ -4,7 +4,7 @@ import axios from "axios";
 export const getItins = () => {
   return dispatch => {
     axios
-      .get("http://localhost:5000/api/itineraries/${cities._id}")
+      .get("http://localhost:5000/api/itineraries/${cities.cityName}")
       .then(res => {
         console.log(res);
         dispatch({
@@ -20,3 +20,4 @@ export const getItins = () => {
       );
   };
 };
+

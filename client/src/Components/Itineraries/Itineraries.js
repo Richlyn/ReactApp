@@ -2,10 +2,8 @@ import React, { Component } from "react";
 import "./Itineraries.css";
 import PropTypes from "prop-types";
 import classnames from "classnames";
-
 import { connect } from "react-redux";
 import Card from "@material-ui/core/Card";
-
 import Avatar from "@material-ui/core/Avatar";
 import ShareIcon from "@material-ui/icons/Share";
 import Collapse from "@material-ui/core/Collapse";
@@ -13,7 +11,6 @@ import CardMedia from "@material-ui/core/CardMedia";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import CardHeader from "@material-ui/core/CardHeader";
-import MoreVertIcon from "@material-ui/icons/MoreVert";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
@@ -24,9 +21,9 @@ import Activities from "../../Components/Activities/Activities";
 class ItineraryList extends Component {
   state = { expanded: false };
   static propTypes = {
-    // getCities: PropTypes.func.isRequired,
+    getCities: PropTypes.func.isRequired,
     itineraries: PropTypes.object.isRequired
-    // isAuthenticated: PropTypes.bool
+  
   };
   componentDidMount() {
     this.props.getItins();
@@ -44,9 +41,9 @@ class ItineraryList extends Component {
           itineraries.map(itineraries => {
             return (
               <React.Fragment>
-                <CardHeader
+             
+                <CardHeader variant="h3"
                 itineraries={itineraries.title} 
-                cityName= {cities.cityName} 
                  key={itineraries}
                   avatar={
                     <Avatar
@@ -55,14 +52,10 @@ class ItineraryList extends Component {
                       className={itineraries.bigAvatar}
                     />
                   }
-                  action={
-                    <IconButton>
-                      <MoreVertIcon />
-                    </IconButton>
-                  }
                   title={itineraries.MYtineraryName}
                   // subheader="September 14, 2016" //create time stamp
                 />
+              
                 <CardMedia
                   className={itineraries.title}
                   title={itineraries.title}
@@ -70,8 +63,8 @@ class ItineraryList extends Component {
                 <img src={itineraries.img} alt={itineraries.title} />
                 <CardContent>
                   <Typography component="p">
-                    {itineraries.city} {itineraries.country}{" "}
-                    {itineraries.duration} ,{itineraries.rating}
+                   ( {itineraries.cityName} , {itineraries.country}) {" "}
+                   Duration: {itineraries.duration} , Rating: {itineraries.rating}/5
                   </Typography>
                 </CardContent>
                 <CardActions
@@ -91,7 +84,7 @@ class ItineraryList extends Component {
                     onClick={this.handleExpandClick}
                     aria-expanded={this.state.expanded}
                     aria-label="Show more"
-                  >
+                  ><p>Activities</p>
                     <ExpandMoreIcon />
                   </IconButton>
                 </CardActions>

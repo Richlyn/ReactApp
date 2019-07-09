@@ -29,6 +29,7 @@ app.use("/api/users", userRoute);
 app.use("/api/activities", activitiesRoute);
 app.use("/api/itineraries", itinerariesRoute);
 
+
 app.use(
   cors({
     origin: "http://localhost:3000"
